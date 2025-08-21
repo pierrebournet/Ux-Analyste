@@ -1,0 +1,30 @@
+# Dossiers d'environnement virtuel Python
+ux-analyzer-backend/venv/
+ux-analyzer-backend/__pycache__/
+ux-analyzer-backend/src/__pycache__/
+ux-analyzer-backend/src/*/__pycache__/
+
+# Dossiers de dépendances Node.js
+ux-analyzer-frontend/node_modules/
+ux-analyzer-frontend/dist/
+
+# Fichiers de base de données
+*.db
+*.sqlite
+*.sqlite3
+
+# Fichiers de logs
+*.log
+
+# Fichiers d'environnement
+.env
+.env.local
+.env.production
+
+# Fichiers temporaires
+*.tmp
+*.temp
+
+# Fichiers système
+.DS_Store
+Thumbs.db
