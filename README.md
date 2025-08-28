@@ -119,7 +119,7 @@ Consultez le fichier `gcp_deployment_guide.md` pour les instructions complètes.
 L'application est actuellement déployée sur la plateforme Manus :
 - **Backend** : Service Flask avec analyse d'images
 - **Frontend** : Application React intégrée
-- **URL publique** : [https://xlhyimcl8jvv.manus.space](https://xlhyimcl8jvv.manus.space)
+- **URL publique** : [https://xlhyimcl71xz.manus.space](https://xlhyimcl71xz.manus.space)
 
 ## 📊 API Endpoints
 
