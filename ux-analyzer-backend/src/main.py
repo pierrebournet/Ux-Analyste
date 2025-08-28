@@ -8,7 +8,7 @@ from flask_cors import CORS
 from src.models.user import db
 from src.models.analysis import Analysis
 from src.routes.user import user_bp
-from src.routes.analysis_minimal import analysis_bp
+from src.routes.analysis_enhanced import analysis_bp
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
 app.config['SECRET_KEY'] = 'asdf#FGSgvasgf$5$WGT'

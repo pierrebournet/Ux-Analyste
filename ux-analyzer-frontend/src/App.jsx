@@ -297,20 +297,54 @@ function App() {
                             <p>{rec.description}</p>
                             <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-md">
                               <p className="font-medium text-sm text-blue-800 dark:text-blue-200">
-                                💡 Suggestion:
+                                💡 Solution:
                               </p>
                               <p className="text-sm text-blue-700 dark:text-blue-300">
-                                {rec.suggestion}
+                                {rec.solution}
                               </p>
                             </div>
                             <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-md">
                               <p className="font-medium text-sm text-green-800 dark:text-green-200">
-                                🔧 Correctif:
+                                🔧 Étapes d'implémentation:
                               </p>
-                              <p className="text-sm text-green-700 dark:text-green-300">
-                                {rec.fix}
-                              </p>
+                              <ul className="list-disc list-inside text-sm text-green-700 dark:text-green-300">
+                                {rec.implementation_steps?.map((step, stepIdx) => (
+                                  <li key={stepIdx}>{step}</li>
+                                ))}
+                              </ul>
                             </div>
+                            {rec.expected_impact && (
+                              <div className="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-md">
+                                <p className="font-medium text-sm text-purple-800 dark:text-purple-200">
+                                  📈 Impact attendu:
+                                </p>
+                                <p className="text-sm text-purple-700 dark:text-purple-300">
+                                  {rec.expected_impact}
+                                </p>
+                              </div>
+                            )}
+                            {rec.effort_estimation && (
+                              <div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-md">
+                                <p className="font-medium text-sm text-yellow-800 dark:text-yellow-200">
+                                  ⏱️ Estimation de l'effort:
+                                </p>
+                                <p className="text-sm text-yellow-700 dark:text-yellow-300">
+                                  {rec.effort_estimation}
+                                </p>
+                              </div>
+                            )}
+                            {rec.references && rec.references.length > 0 && (
+                              <div className="bg-gray-50 dark:bg-gray-700/20 p-3 rounded-md">
+                                <p className="font-medium text-sm text-gray-800 dark:text-gray-200">
+                                  📚 Références:
+                                </p>
+                                <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300">
+                                  {rec.references.map((ref, refIdx) => (
+                                    <li key={refIdx}>{ref}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
                           </AlertDescription>
                         </div>
                       </div>
